@@ -1,4 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa"
+
 import {
 	Badge,
 	Container,
@@ -7,15 +8,14 @@ import {
 	Nav,
 	Navbar,
 } from "react-bootstrap"
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Header = () => {
 	return (
 		<Navbar bg="dark" variant="dark" style={{ height: 80 }}>
 			<Container>
 				<Navbar.Brand>
-					{/* <Link to="/">Mavitu Shopping </Link> */}
-					<a href="#">Shoppe</a>
+					<Link to="/">Mavitu Shopping </Link>
 				</Navbar.Brand>
 
 				<Navbar.Text className="search">
@@ -35,7 +35,9 @@ const Header = () => {
 							<Badge> {12} </Badge>
 						</Dropdown.Toggle>
 
-						{/* <Dropdown.Menu style={{ minWidth: 370 }}>Items</Dropdown.Menu> */}
+						<Dropdown.Menu style={{ minWidth: 370 }}>
+							<span style={{ padding: 10 }}>Cart is Empty</span>
+						</Dropdown.Menu>
 					</Dropdown>
 				</Nav>
 			</Container>
